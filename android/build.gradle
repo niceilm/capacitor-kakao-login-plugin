@@ -5,14 +5,14 @@ ext {
     androidxEspressoCoreVersion = project.hasProperty('androidxEspressoCoreVersion') ? rootProject.ext.androidxEspressoCoreVersion : '3.5.1'
 }
 buildscript {
-    ext.kotlin_version = project.hasProperty("kotlin_version") ? rootProject.ext.kotlin_version : '1.9.10'
+    ext.kotlin_version = project.hasProperty("kotlin_version") ? rootProject.ext.kotlin_version : '1.9.25'
     repositories {
         google()
-        jcenter()
         maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath 'com.android.tools.build:gradle:8.7.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -45,13 +45,12 @@ android {
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_21
-        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 }
 
 repositories {
        google()
-       jcenter()
        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
        mavenCentral()
