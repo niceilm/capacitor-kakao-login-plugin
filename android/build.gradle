@@ -9,6 +9,7 @@ buildscript {
     repositories {
         google()
         maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.7.2'
@@ -50,8 +51,8 @@ android {
 
 repositories {
        google()
-       maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+       maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
 }
 
 
